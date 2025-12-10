@@ -1,0 +1,123 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #111112, #8f94fb);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: max-content;
+
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    width: 90%;
+    max-width: 900px;
+    padding-top: 25px;
+}
+   
+
+/* Score Box */
+.score-box {
+    background: #111211e9;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    max-height: max-content;
+}
+
+.socre-board{
+   width: 150px;
+   background: green;
+   height: 200px;
+   z-index: -1;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius:50%;
+   margin-top: 25px;
+   margin-left: 25px;
+   transform: rotate3d(180deg) ;
+   transition: transform(rotate3d);
+   animation:anim ;
+   cursor: pointer;
+   
+}
+
+.score-box h2 {
+    margin: 0;
+    color: #259e39cd;
+    font-size: 65px;
+}
+
+#score-value {
+    font-size: 90px;
+    font-weight: bold;
+    color: #d1d5d3;
+    z-index: 2;
+    position: relative;
+    margin-top: -150px;
+}
+
+/* Quiz Box */
+.quiz-box {
+    background: #fff;
+    flex: 1;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.btn-grid {
+    display: grid;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.btn {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #ececec;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ddd;
+}
+
+.correct {
+    background: #4CAF50 !important;
+    color: #fff;
+}
+
+.wrong {
+    background: #E53935 !important;
+    color: #fff;
+}
+
+.hidden {
+    display: none;
+}
+
+#next-btn, #restart-btn {
+    width: 100%;
+    background: #4e54c8;
+    color: #fff;
+    font-weight: bold;
+}
+
+#next-btn:hover, #restart-btn:hover {
+    background: #3d42a1;
+}
